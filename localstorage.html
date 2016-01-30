@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Local storage</title>
+		<script type="text/Javascript">
+		
+		function setBackground () {
+		localStorage.bgColor = document.getElementById("colors").value;
+		document.body.style.backgroundColor = localStorage.bgColor;
+		
+		}
+		
+		
+		function loadBackground () {
+		
+		if ( localStorage.bgColor.length == 0) {
+			localStorage.bgColor = "white";
+		}
+		else {
+			
+			document.getElementById("colors").value = localStorage.bgColor;
+			document.body.style.backgroundColor = localStorage.bgColor;
+		}
+		};
+		
+		
+		</script>
+	</head>
+	
+	<body onLoad="javascript: loadBackground();">
+	
+	<select id = "colors">
+	<option value="white">White</option>
+	<option value="yellow">Yellow</option>
+	<option value="orange">Orange</option>
+	<option value="red">Red</option>
+	<option value="blue">Blue</option>
+	<option value="green">Green</option>
+	<option value="brown">Brown</option>
+	<option value="black">Black</option>
+	
+	
+	</select>
+	
+	<input type="button" value="Set background color" onClick="javascript: setBackground();"/>
+	
+	</body>
+
+</html>
