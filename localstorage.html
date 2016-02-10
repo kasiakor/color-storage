@@ -1,54 +1,35 @@
 <!DOCTYPE html>
 <html>
-		<head>
-			<link rel = "stylesheet" type="text/css" href="mystyle.css">
-			<title>Local storage</title>
-			<script type="text/Javascript">
-			
-				function setBackground () {
-				localStorage.bgColor = document.getElementById("colors").value;
-				document.body.style.backgroundColor = localStorage.bgColor;
-				
-				}
-				
-				
-				function loadBackground () {
-				
-				if ( localStorage.bgColor.length == 0) {
-					localStorage.bgColor = "#FFFFFF";
-				}
-				else {
-					
-					document.getElementById("colors").value = localStorage.bgColor;
-					document.body.style.backgroundColor = localStorage.bgColor;
-				}
-				};
+	<head>
+		<link rel = "stylesheet" type="text/css" href="mystyle.css">
+		<script type="text/javascript" src="colorstorage.js"></script>
+		<title>Local storage</title>
 		
-			</script>
-		
-		</head>
+	</head>
 	
 	
-		<body onLoad="javascript: loadBackground();">
+	<body onLoad="loadBackground();">
 	
-			<select id = "colors">
-			<option value="#FFFFFF">White</option>
-			<option value="#FFFF00">Yellow</option>
-			<option value="#FFA500">Orange</option>
-			<option value="#FF0000">Red</option>
-			<option value="#0000FF">Blue</option>
-			<option value="#008000">Green</option>
-			<option value="#A52A2A">Brown</option>
-			<option value="#000000">Black</option>
-			</select>
+		<select id = "myColor">
+		<option value="#FFFFFF">White</option>
+		<option value="#FFFF00">Yellow</option>
+		<option value="#FFA500">Orange</option>
+		<option value="#FF0000">Red</option>
+		<option value="#0000FF">Blue</option>
+		<option value="#008000">Green</option>
+		<option value="#A52A2A">Brown</option>
+		<option value="#000000">Black</option>
+		</select>
 	
-			<input type="button" value="Set background color" onClick="javascript: setBackground();"/>
+		<input type="button" value="Set background color" onClick="setBackground();"/>
 	
-			<p>
-				<a href="colorstorage.html">Visit color storage page</a>
-			</p>
+		<p id="foo"></p>
+
+		<p>
+			<a href="colorstorage.html">Visit color storage page</a>
+		</p>
 			
-		</body>
+	</body>
 	
 
 </html>

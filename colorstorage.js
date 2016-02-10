@@ -1,17 +1,16 @@
 
-function myFunction() {
-		
-		var x = document.getElementById("myColor").value;
-		document.getElementById("demo").innerHTML = x;
-		document.body.style.backgroundColor = x;
-		localStorage.bgColor = x;
-			}
-    
-function init () {
-
-if (localStorage.bgColor.length !== 0) {
+function setBackground () {				
+	var x = document.getElementById("myColor").value;
+	localStorage.bgColor = x;
+	document.body.style.backgroundColor = x;
+	document.getElementById("foo").innerHTML = x;
+				
+};
+				
+				
+function loadBackground () {
+	if (localStorage.bgColor.length !== 0) {
 		document.body.style.backgroundColor = localStorage.bgColor;
-}
-}
-
-
+		document.getElementById("myColor").value = localStorage.bgColor;			
+	}
+};
