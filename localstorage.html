@@ -1,35 +1,27 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<link rel = "stylesheet" type="text/css" href="mystyle.css">
-		<script type="text/javascript" src="colorstorage.js"></script>
-		<title>Local storage</title>
-		
-	</head>
+<head>
+	<link rel = "stylesheet" type="text/css" href="mystyle.css">
+	<script type="text/javascript" src="colorstorage.js"></script>
+	<title>Local storage</title>
+</head>
+<body onLoad="loadBackground();">
 	
+	<select id = "myColor">
+	<option value="#FFFFFF">White</option>
+	<option value="#FFFF00">Yellow</option>
+	<option value="#FFA500">Orange</option>
+	<option value="#FF0000">Red</option>
+	<option value="#0000FF">Blue</option>
+	<option value="#008000">Green</option>
+	<option value="#A52A2A">Brown</option>
+	<option value="#000000">Black</option>
+	</select>
+	<input type="button" value="Set background color" onClick="setBackground();"/>
 	
-	<body onLoad="loadBackground();">
-	
-		<select id = "myColor">
-		<option value="#FFFFFF">White</option>
-		<option value="#FFFF00">Yellow</option>
-		<option value="#FFA500">Orange</option>
-		<option value="#FF0000">Red</option>
-		<option value="#0000FF">Blue</option>
-		<option value="#008000">Green</option>
-		<option value="#A52A2A">Brown</option>
-		<option value="#000000">Black</option>
-		</select>
-	
-		<input type="button" value="Set background color" onClick="setBackground();"/>
-	
-		<p id="foo"></p>
-
-		<p>
-			<a href="colorstorage.html">Visit color storage page</a>
-		</p>
-			
-	</body>
-	
-
+	<p id="foo"></p>
+	<p>
+		<a href="index.html">Visit color storage page</a>
+	</p>
+</body>
 </html>
